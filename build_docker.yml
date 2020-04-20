@@ -1,0 +1,12 @@
+- hosts: '{{ hosts }}'
+  gather_facts: no
+  tasks:
+    - name: change tag of image
+      shell: sudo docker build -t {{ dockerimagetag }} .
+      args:
+        chdir: '{{ workspace }}'
+    - name: push image to docker hub
+      shell: sudo docker push {{ dockerimagetag }}
+      args:
+          chdir: '{{ workspace }}'
+
