@@ -31,7 +31,7 @@ pipeline {
 		stage ('Checkout') {
 			steps {
 				script {
-			     git 'https://github.com/kaganmersin/hepsiburadacase.git'
+			     git 'https://github.com/kaganmersin/sample-pipe'
 				}
 			}
 	
